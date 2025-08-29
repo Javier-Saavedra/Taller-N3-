@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Pokédex — Taller 3</title>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card" id="card">
+      <div class="img-wrap">
+        <img id="pokemon-img" alt="Imagen del Pokémon" />
+      </div>
+      <div class="info">
+        <h1 id="pokemon-name">—</h1>
+        <p id="pokemon-id">#—</p>
+
+        <div class="types" id="types"></div>
+
+        <div class="nav">
+          <button id="prev" class="btn" aria-label="Anterior">◀ Prev</button>
+          <button id="next" class="btn" aria-label="Siguiente">Next ▶</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal de detalle -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" id="modal-close" aria-label="Cerrar">✕</button>
+      <div class="modal__header">
+        <img id="modal-img" alt="Imagen del Pokémon" class="modal__img"/>
+        <div>
+          <h2 id="modal-title" class="modal__title">—</h2>
+          <p id="modal-id" class="modal__id">#—</p>
+        </div>
+      </div>
+
+      <div class="modal__grid">
+        <div class="modal__block">
+          <h3>Medidas</h3>
+          <ul class="kv">
+            <li><span>Altura</span><strong id="modal-height">—</strong></li>
+            <li><span>Peso</span><strong id="modal-weight">—</strong></li>
+          </ul>
+        </div>
+
+        <div class="modal__block">
+          <h3>Habilidades</h3>
+          <ul id="modal-abilities" class="bullets"></ul>
+        </div>
+
+        <div class="modal__block">
+          <h3>Estadísticas</h3>
+          <ul id="modal-stats" class="stats"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
